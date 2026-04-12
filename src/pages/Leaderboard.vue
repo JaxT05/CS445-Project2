@@ -68,7 +68,6 @@ export default defineComponent({
 </template>
 
 <style scoped>
-/* Color Palette */
 :root {
   --bg-cream: #FAF5E6;
   --forest-green: #5B6D44;
@@ -78,7 +77,7 @@ export default defineComponent({
 }
 
 .leaderboard-container {
-  background-color: #FAF5E6; /* Cream background */
+  background-color: #FAF5E6;
   min-height: 100vh;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -93,7 +92,7 @@ export default defineComponent({
 }
 
 .category-pill {
-  background-color: #5B6D44; /* Dark moss green */
+  background-color: #5B6D44;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -117,7 +116,7 @@ export default defineComponent({
 }
 
 .user-highlight {
-  background-color: #DDCDB0; /* Tan highlight */
+  background-color: #DDCDB0;
   border-radius: 4px;
 }
 
@@ -126,7 +125,7 @@ export default defineComponent({
 }
 
 .stats-card {
-  background-color: #97A97C; /* Light sage green */
+  background-color: #97A97C;
   padding: 20px;
   border-radius: 12px;
   color: #1A1A1A;

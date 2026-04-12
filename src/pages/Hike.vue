@@ -1,15 +1,13 @@
 <script setup>
 import { ref } from 'vue';
 
-// --- Configuration ---
 const maps = {
   'Anna Vista': 'https://www.kestreltrust.org/wp-content/uploads/2018/11/Trail-map-featured-image-web.jpg',
   'Sentinel Hill': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU5WkKYX4IcsmCiQ5VaNfn-pynCO2a9w7ypg&s',
   'Whispering Pines': 'https://montrails.org/wp-content/uploads/2016/09/MRTC_Brochure2016_FINAL_Web-1-1-1024x737.jpg',
 };
 
-// --- State Management ---
-const currentHikeState = ref('START_SCREEN'); // 'START_SCREEN', 'RUNNING', 'PAUSED'
+const currentHikeState = ref('START_SCREEN');
 const trailTitle = ref('Anna Vista');
 const stepsCount = ref(0);
 const distanceString = ref('0m');
@@ -20,7 +18,6 @@ const trailOptions = Object.keys(maps);
 const showEndSummaryOverlay = ref(false);
 const showViewMapOverlay = ref(false);
 
-// --- Methods ---
 const selectTrail = (newTrail) => {
   trailTitle.value = newTrail;
   isLocationDropdownOpen.value = false;
@@ -32,7 +29,6 @@ const handleStartPress = () => {
 
 const handlePausePress = () => {
   currentHikeState.value = 'PAUSED';
-  // Update values for the "Paused" state condition
   stepsCount.value = 1000;
   distanceString.value = '0.1m';
 };
@@ -150,7 +146,6 @@ const toggleViewMapOverlay = () => {
 </template>
 
 <style scoped>
-/* Main Layout */
 .main-content-area {
   background-color: #F5E8D8;
   min-height: 100vh;
@@ -159,7 +154,6 @@ const toggleViewMapOverlay = () => {
   color: #333;
 }
 
-/* Dropdown Section */
 .where-hiking-section {
   display: flex;
   align-items: center;
@@ -183,7 +177,7 @@ const toggleViewMapOverlay = () => {
   background-color: #546B41;
   color: white;
   padding: 0.6rem 1.2rem;
-  border-radius: 25px; /* Pill Shape */
+  border-radius: 25px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -213,11 +207,10 @@ const toggleViewMapOverlay = () => {
   border-bottom: none;
 }
 
-/* Shared Card Styling */
 .card-container, .shadow-card {
   background: white;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Drop Shadow */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card-container {
@@ -227,9 +220,8 @@ const toggleViewMapOverlay = () => {
   max-width: 320px;
 }
 
-/* Icons and Controls */
 .icon-circle {
-  background-color: #D3D3D3; /* Gray Circle */
+  background-color: #D3D3D3;
   border: none;
   border-radius: 50%;
   width: 120px;
@@ -268,7 +260,6 @@ const toggleViewMapOverlay = () => {
   font-weight: 600;
 }
 
-/* Stats */
 .stat-displays {
   text-align: center;
   margin: 2rem 0;
@@ -277,7 +268,6 @@ const toggleViewMapOverlay = () => {
   line-height: 1.8;
 }
 
-/* Map Card Details */
 .map-label {
   display: block;
   font-size: 1.2rem;
@@ -297,7 +287,6 @@ const toggleViewMapOverlay = () => {
   object-fit: cover;
 }
 
-/* Overlays */
 .overlay-container {
   position: fixed;
   inset: 0;
