@@ -50,8 +50,8 @@ import Goals from '../components/Goals.vue';
 .info-container {
     display: flex;
     flex-direction: column;
-    max-width: 25rem;
-    padding: 1rem;
+    max-width: 30rem;
+    padding: 2rem;
     margin: 0 auto;
     text-align: left;
 }

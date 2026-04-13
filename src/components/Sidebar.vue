@@ -3,7 +3,7 @@
 <template>
     <nav>
         <RouterLink class="link" to="/"><h2>Home</h2></RouterLink>
-        <RouterLink class="link" to="/setup"><h2>Setup</h2></RouterLink>
+        <!-- <RouterLink class="link" to="/setup"><h2>Setup</h2></RouterLink> -->
         <RouterLink class="link" to="/camera"><h2>Camera</h2></RouterLink>
         <RouterLink class="link" to="/profile"><h2>Profile</h2></RouterLink>
         <RouterLink class="link" to="/hike"><h2>Hiking</h2></RouterLink>
