@@ -7,7 +7,9 @@ import Sidebar from './components/Sidebar.vue';
   <head>
   </head>
   <main>
-    <header>Camera</header>
+    <header>
+      <img src="./assets/hamburger-menu.svg" alt="hamburger" width="30px" height="30px"/>
+    </header>
     <Sidebar/>
       <RouterView/>
   </main>
