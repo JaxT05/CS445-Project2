@@ -19,7 +19,7 @@ import Goals from '../components/Goals.vue';
         <div class="info-details">
             <Goals/>
             <h2>Interested in Our Historical Exhibits?</h2>
-            <Button class="button">Learn More</Button>
+            <Button class="button"><a href="https://www.connerprairie.org/calendar/?cal-477189-endDate=2025-12-31&cal-477189-page=1&cal-477189-startDate=2025-10-01&cal-477189-tags=65869">Learn More</a></Button>
         </div>
     </div>
 </template>

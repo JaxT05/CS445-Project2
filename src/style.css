@@ -97,6 +97,13 @@ p {
   color: var(--white);
   font-size: 1.25rem;
 }
+.button a {
+  font-family: "Maven Pro", sans-serif;
+    font-weight: 500;
+    font-size: 1.35rem;
+    text-decoration: none;
+    color: var(--white);
+}
 code,
 .counter {
   font-family: var(--mono);
