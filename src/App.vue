@@ -17,14 +17,13 @@ import Sidebar from './components/Sidebar.vue';
 
 <style scoped>
 header {
-  background-color: #546B41;
-  height: fit-content;
   display: flex;
-  flex-direction: row-reverse;
-  align-items: space-between;
-  padding: 2rem;
-  position: sticky; 
-  top: 0;
-  z-index: 1001;
+  align-items: center;
+  background-color: #546B41;
+  height: 4rem;
+  color:white;
+  font-weight: bold;
+  font-size: 2rem;
+  padding:1rem;
 }
 </style>
