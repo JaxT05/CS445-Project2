@@ -7,7 +7,7 @@ import Sidebar from './components/Sidebar.vue';
   <head>
   </head>
   <main>
-    <header>Leaderboard</header>
+    <header>Camera</header>
     <Sidebar/>
       <RouterView/>
   </main>
