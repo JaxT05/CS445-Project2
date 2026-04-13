@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import Sidebar from './components/Sidebar.vue';
+import { ref } from 'vue';
+
+let isActive = ref(false);
 
 </script>
 
@@ -8,9 +11,11 @@ import Sidebar from './components/Sidebar.vue';
   </head>
   <main>
     <header>
-      <img src="./assets/hamburger-menu.svg" alt="hamburger" width="30px" height="30px"/>
+      <button aria="menu button" @click="isActive = !isActive">
+        <img src="./assets/hamburger-menu.svg" alt="hamburger" width="30px" height="30px"/>
+      </button>
     </header>
-    <Sidebar/>
+    <Sidebar v-if="isActive"/>
       <RouterView/>
   </main>
 </template>
@@ -27,5 +32,8 @@ header {
   top: 0;
   z-index: 1001;
 }
-
+header button {
+  background: none;
+  border: none;
+}
 </style>
