@@ -12,11 +12,11 @@
 </template>
 <style scoped>
 nav {
-    position: absolute;
+    position: fixed;
     right: 0;
     width: fit-content;
     height: 100%;
-    background-color: #99AD7A;
+    background-color: var(--light-green);
     display: flex;
     flex-direction: column;
     gap: 1rem;
