@@ -5,16 +5,16 @@
         <h2>What are you interested in?</h2>
         <form class="input-form" action="">
             <div>
-                <input type="checkbox" id="checkbox" v-model="checked">
+                <input type="checkbox" id="checkbox">
                 <label for="checkbox">Hiking/Walking</label>
             </div>
             <div>
-                <input type="checkbox" id="checkbox" v-model="checked">
+                <input type="checkbox" id="checkbox">
                 <label for="checkbox">Plant Identification</label>
             </div>
 
             <div>
-                <input type="checkbox" id="checkbox" v-model="checked">
+                <input type="checkbox" id="checkbox">
                 <label for="checkbox">Animal Identification</label>
             </div>
 

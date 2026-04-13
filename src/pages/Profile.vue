@@ -56,7 +56,7 @@ export default defineComponent({
 
       <div class="finds-grid">
         <div 
-          v-for="(item, index) in findsGrid" 
+          v-for="(index) in findsGrid" 
           :key="index" 
           class="grid-item"
         >

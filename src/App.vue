@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Sidebar from './components/Sidebar.vue';
+import Sidebar from '../src/components/Sidebar.vue';
 import { ref } from 'vue';
 
 let isActive = ref(false);

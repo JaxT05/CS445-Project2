@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Goals from '../components/Goals.vue';
 import SetupSurvey from '../components/SetupSurvey.vue';
 
 </script>
