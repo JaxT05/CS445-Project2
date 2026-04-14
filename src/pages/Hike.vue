@@ -72,20 +72,21 @@ const toggleViewMapOverlay = () => {
         </div>
       </div>
     </div>
+    <p class="hike-info-text">Starting a hike will track the steps and distance you have walked. You can pause and resume a hike at any point.</p>
     
     <div class="card-container control-card">
       <div v-if="currentHikeState === 'START_SCREEN'" class="state-layout">
         <button class="icon-circle" @click="handleStartPress">
           <span class="icon-symbol">▶</span> 
         </button>
-        <span class="card-label">Start</span>
+        <span class="card-label">Start Hike</span>
       </div>
       
       <div v-else-if="currentHikeState === 'RUNNING'" class="state-layout">
         <button class="icon-circle" @click="handlePausePress">
           <span class="icon-symbol">||</span> 
         </button>
-        <span class="card-label">Pause</span>
+        <span class="card-label">Pause Hike</span>
       </div>
       
       <div v-else-if="currentHikeState === 'PAUSED'" class="paused-controls-row">
@@ -126,7 +127,7 @@ const toggleViewMapOverlay = () => {
           <p>Miles: {{ distanceString }}</p> 
         </div>
         <div class="summary-actions">
-          <button class="green-btn">Continue</button>
+           <RouterLink class="green-btn" to="/profile">Save Hike to Profile</RouterLink>
           <button class="green-btn" @click="handleNewHike">New Hike</button>
         </div>
       </div>
@@ -147,9 +148,12 @@ const toggleViewMapOverlay = () => {
 
 <style scoped>
 .main-content-area {
-  background-color: #F5E8D8;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
   min-height: 100vh;
-  padding: 1.5rem;
+  max-width: 30rem;
+  padding: 2rem;
   font-family: sans-serif;
   color: #333;
 }
@@ -158,7 +162,7 @@ const toggleViewMapOverlay = () => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   position: relative;
   z-index: 100;
 }
@@ -219,27 +223,35 @@ const toggleViewMapOverlay = () => {
   width: 90%;
   max-width: 320px;
 }
+.hike-info-text {
+  margin: 1.5rem;
+}
 
 .icon-circle {
+  position: relative;
   background-color: #D3D3D3;
   border: none;
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   cursor: pointer;
   margin-bottom: 1rem;
 }
 
 .icon-circle.small {
+  position: relative;
   width: 80px;
   height: 80px;
 }
 
 .icon-symbol {
-  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2.5em;
   color: #444;
 }
 
@@ -327,9 +339,11 @@ const toggleViewMapOverlay = () => {
 }
 
 .green-btn {
+  text-decoration: none;
+  font-size: 1rem;
   flex: 1;
-  background-color: #556B2F;
-  color: white;
+  background-color: var(--dark-green);
+  color: var(--white);
   border: none;
   padding: 0.8rem;
   border-radius: 8px;

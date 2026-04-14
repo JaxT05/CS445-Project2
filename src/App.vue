@@ -15,7 +15,9 @@ let isActive = ref(false);
         <img src="./assets/hamburger-menu.svg" alt="hamburger" width="30px" height="30px"/>
       </button>
     </header>
-    <Sidebar v-if="isActive"/>
+    <Transition name="slide">
+      <Sidebar v-if="isActive" v-model="isActive"/>
+    </Transition>
       <RouterView/>
   </main>
 </template>
@@ -35,5 +37,26 @@ header {
 header button {
   background: none;
   border: none;
+}
+@keyframes fadeIn {
+  from {opacity: 0.5;}
+  to {opacity: 1};
+}
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0.5};
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.2s;
+}
+
+.slide-enter-from {
+  transform: translateX(100%);
+  animation: fadeIn 0.2s;
+}
+.slide-leave-to {
+  transform: translateX(100%);
+  animation: fadeOut 0.2s;
 }
 </style>

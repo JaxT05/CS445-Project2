@@ -1,13 +1,19 @@
-<script lang="ts">
+<script setup lang="ts">
+const isVisible = defineModel()
+
+function toggle () {
+    isVisible.value = !isVisible.value
+}
 </script>
+
 <template>
     <nav>
-        <RouterLink class="link" to="/"><h2>Home</h2></RouterLink>
+        <RouterLink class="link" to="/" @click="toggle"><h2>Home</h2></RouterLink>
         <!-- <RouterLink class="link" to="/setup"><h2>Setup</h2></RouterLink> -->
-        <RouterLink class="link" to="/camera"><h2>Camera</h2></RouterLink>
-        <RouterLink class="link" to="/profile"><h2>Profile</h2></RouterLink>
-        <RouterLink class="link" to="/hike"><h2>Hiking</h2></RouterLink>
-        <RouterLink class="link" to="/leaderboard"><h2>Leaderboard</h2></RouterLink> 
+        <RouterLink class="link" to="/camera" @click="toggle"><h2>Camera</h2></RouterLink>
+        <RouterLink class="link" to="/profile" @click="toggle"><h2>Profile</h2></RouterLink>
+        <RouterLink class="link" to="/hike" @click="toggle"><h2>Hiking</h2></RouterLink>
+        <RouterLink class="link" to="/leaderboard" @click="toggle"><h2>Leaderboard</h2></RouterLink> 
       </nav>
 </template>
 <style scoped>
@@ -15,7 +21,7 @@ nav {
     position: fixed;
     z-index: 1000;
     right: 0;
-    top: 4rem;
+    top: 4.5rem;
     width: fit-content;
     height: 100vh;
     background-color: var(--light-green);
